@@ -1,0 +1,26 @@
+.big_button {
+    --back: var(--main-text-color);
+    --text: var(--main-background-color);
+    
+    padding: 1.25rem 2.5rem;
+    border: 1px solid var(--main-text-color);
+    background-color: var(--back);
+    color: var(--text);
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.big_button.dark {
+    --back: var(--main-background-color);
+    --text: var(--main-text-color);
+}
+
+.big_button:hover {
+    background-color: var(--text);
+    color: var(--back);
+}

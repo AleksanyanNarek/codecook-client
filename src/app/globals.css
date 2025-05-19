@@ -1,33 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rosarivo&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --main-background-color: #171717;
+  --main-text-color: #ffffff;
+  --dark-grey: #433E37;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --red-color: #c72b20;
+  --light-red-color: #FB5C6A;
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --short-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
 }
 
 a {

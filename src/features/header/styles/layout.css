@@ -1,0 +1,25 @@
+.header_layout {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    border-bottom: 1px solid var(--dark-grey);
+}
+
+.main_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.main_header .header_logo {
+    height: auto;
+}
+
+.main_header .menus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    font-size: 0.75rem;
+}
