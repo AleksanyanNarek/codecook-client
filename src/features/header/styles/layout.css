@@ -1,8 +1,12 @@
 .header_layout {
+    /* position: sticky;
+    top: 0; */
+    /* z-index: 100; */
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1rem 2rem;
     border-bottom: 1px solid var(--dark-grey);
+    background-color: var(--main-background-color);
 }
 
 .main_header {
