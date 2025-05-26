@@ -15,8 +15,8 @@ export const menuList: MenuListItem[] = [
         text: 'MENU',
         url: routes.menuRoute()
     },
-    {
-        text: 'EVENTS',
-        url: routes.eventsRoute()
-    },
+    // {
+    //     text: 'EVENTS',
+    //     url: routes.eventsRoute()
+    // },
 ]

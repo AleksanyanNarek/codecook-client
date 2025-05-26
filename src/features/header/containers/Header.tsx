@@ -1,11 +1,15 @@
 import React from 'react'
-import Layout from '../ui/layout'
-import HeaderButton from './HeaderButton'
+import Layout from '../ui/Layout';
+import HeaderButton from './HeaderButton';
 
-const Header = () => {
+import { getCurrentUser } from '@/entities/user';
+
+const Header = async () => {
+  const user = await getCurrentUser();
+
   return (
     <Layout
-      action={<HeaderButton />}
+      action={ <HeaderButton user={ user } /> }
     />
   )
 }

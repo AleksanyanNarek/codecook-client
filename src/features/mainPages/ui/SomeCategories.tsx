@@ -1,29 +1,15 @@
 import React from 'react'
 import '../styles/someCategories.css';
+import Image from 'next/image';
+import LinkElement from '@/shared/ui/linkElement/LinkElement';
+import { getSomeCategoriesQuery } from '@/entities/category/api/categoryApi';
+import { CategoryWithImage } from '@/entities/category/domain';
+import { SuccessResponse } from '@/shared/utils/types';
 
-const SomeCategories = () => {
-  const categories = [
-    {
-      name: 'Salads',
-      imageUrl: 'https://res.cloudinary.com/dvdek29md/image/upload/v1747699047/CodeCook/main/main-home-img-7_rjdkd9.jpg',
-      decription: 'Fresh and healthy salads made with seasonal ingredients.',
-    },
-    {
-      name: 'Desserts',
-      imageUrl: 'https://res.cloudinary.com/dvdek29md/image/upload/v1747699071/CodeCook/main/main-home-img-5_qypbyx.jpg',
-      decription: 'Indulge in our delicious desserts, crafted with love and care.',
-    },
-    {
-      name: 'Drinks',
-      imageUrl: 'https://res.cloudinary.com/dvdek29md/image/upload/v1747699105/CodeCook/main/main-home-img-6_olevue.jpg',
-      decription: 'Refreshing drinks to complement your meal and quench your thirst.',
-    },
-    {
-      name: 'Hot Dishes',
-      imageUrl: 'https://res.cloudinary.com/dvdek29md/image/upload/v1747699139/CodeCook/main/main-home-blog-img-1_ht5srt.jpg',
-      decription: 'Savor our hot dishes, prepared with the finest ingredients and spices.',
-    },
-  ]
+const SomeCategories = async () => {
+  const categoriesData = await getSomeCategoriesQuery() as SuccessResponse<CategoryWithImage[]>;
+
+  const categories: CategoryWithImage[] = categoriesData.data;
 
   return (
     <div className='some_categories_wrapper'>
@@ -36,10 +22,19 @@ const SomeCategories = () => {
       <div className='some_categories_list'>
         {categories.map((category, index) => (
           <div key={index} className='some_categories_item'>
-            <img src={category.imageUrl} alt={category.name} className='some_categories_image' />
+            <Image
+              src={category.imageUrl}
+              width={ 200 }
+              height={ 200 }
+              alt={category.name}
+              className='some_categories_image'
+            />
             <div className='some_categories_content'>
               <h3 className='some_categories_title'>{category.name}</h3>
-              <p className='some_categories_description'>{category.decription}</p>
+              <LinkElement
+                text='VIEW MORE'
+                url={`menu?category=${category.id}`}
+              />
             </div>
           </div>
         ))}

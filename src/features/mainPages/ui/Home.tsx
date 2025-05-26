@@ -18,7 +18,7 @@ const Home = () => {
         <div className='home_content'>
           <h2 className='home_title'>The Art Of Making Food</h2>
           <p className='home_description'>
-            At our restaurant, cooking is more than just preparing meals — it's an art form. From the freshest ingredients to the finest techniques, we craft every dish with care, creativity, and love. Whether you're here for a quick bite or a memorable dining experience, enjoy the perfect harmony of flavor, tradition, and innovation.
+            {"At our restaurant, cooking is more than just preparing meals — it's an art form. From the freshest ingredients to the finest techniques, we craft every dish with care, creativity, and love. Whether you're here for a quick bite or a memorable dining experience, enjoy the perfect harmony of flavor, tradition, and innovation."}
           </p>
         </div>
       </div>

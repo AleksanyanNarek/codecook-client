@@ -1,4 +1,4 @@
-import { ErrorDetails } from './../../../../api/utils/types';
+import { ErrorDetails } from "./types";
 
 export function extractFieldErrors<T extends string>(
   errorDetails: ErrorDetails | undefined,

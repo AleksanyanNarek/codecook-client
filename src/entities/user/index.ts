@@ -1,0 +1,1 @@
+export { getCurrentUser } from "./services/get-current-user";

@@ -1,0 +1,35 @@
+.modal_shadow {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal_container {
+    padding: 1rem 2rem 2rem;
+    min-width: 50vw;
+    border: 1px solid var(--main-text-color);
+    background-color: var(--main-background-color);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+
+.modal_header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.modal_header .modal_close_button {
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}

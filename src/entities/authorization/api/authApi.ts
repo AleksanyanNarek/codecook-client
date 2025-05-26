@@ -1,5 +1,5 @@
 import { fetcher } from "@/shared/utils/fetcher";
-import { LOGIN_ENDPOINT, SIGN_UP_ENDPOINT } from "../utils/endpoints";
+import { LOG_OUT_ENDPOINT, LOGIN_ENDPOINT, SIGN_UP_ENDPOINT } from "../utils/endpoints";
 
 import { LoginForm, SignUpForm } from "../domain";
 
@@ -17,6 +17,12 @@ export async function signUpQuery(signUpData: SignUpForm) {
     method: 'POST',
     body: JSON.stringify(signUpData),
   });
+
+  return res;
+}
+
+export async function logOutQuery() {
+  const res = await fetcher(LOG_OUT_ENDPOINT, { method: 'GET' });
 
   return res;
 }

@@ -4,7 +4,6 @@ import { loginQuery } from "@/entities/authorization/api/authApi";
 import { LoginForm } from "@/entities/authorization/domain";
 import { routes } from "@/shared/utils/routes";
 import { ErrorResponse } from "@/shared/utils/types";
-import { NextResponse } from "next/server";
 import { extractFieldErrors } from "@/shared/utils/helpers";
 
 export type LoginActionState = {

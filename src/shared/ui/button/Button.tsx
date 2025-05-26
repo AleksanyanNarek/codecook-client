@@ -5,13 +5,14 @@ import './button.css';
 type ButtonProps = {
   text: string;
   isDark: boolean;
+  onclick?: () => void;
 }
 
-const Button: FC<ButtonProps> = ({ text, isDark }) => {
+const Button: FC<ButtonProps> = ({ text, isDark, onclick }) => {
   return (
     <button
       className={ `big_button ${ isDark ? 'dark' : '' }` }
-      // onClick={ onclick }
+      onClick={ onclick }
     >
       { text }
     </button>

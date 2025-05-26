@@ -52,7 +52,7 @@ const LoginForm = () => {
           isDark={ false }
         />
         <span className='auth_footer_text'>
-          Don't have an account
+          {"Don't have an account?"}
           <LinkElement
             text='Sign Up'
             url={ routes.signupRoute() }

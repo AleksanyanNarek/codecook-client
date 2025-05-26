@@ -1,0 +1,35 @@
+.menu_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 18rem));
+    gap: 2rem;
+}
+
+.menuItem_card {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuItem_img_wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.menuItem_img {
+    object-fit: cover;
+}
+
+.menuItem_card_bottom {
+    padding: 1rem;
+    border: 1px solid var(--main-text-color);
+    border-radius: 0 0 0.75rem 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.menuItem_card_bottom .price_val {
+    font-weight: 700;
+    margin-right: 0.25rem;
+}

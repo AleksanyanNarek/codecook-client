@@ -1,9 +1,9 @@
-type ErrorDetails = Record<string, string[]>
+export type ErrorDetails = Record<string, string[]>
 
 export type SuccessResponse<T> = {
   success: true;
   message: string;
-  data?: T;
+  data: T
 }
 
 export type ErrorResponse = {

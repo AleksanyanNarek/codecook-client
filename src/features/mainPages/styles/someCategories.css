@@ -72,8 +72,6 @@
     font-weight: 500;
 }
 
-.some_categories_content .some_categories_description {
-    color: var(--secondary-text-color);
-    line-height: 24px;
+.some_categories_content .link_element {
+    font-size: 0.85rem;
 }
-

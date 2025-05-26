@@ -1,0 +1,19 @@
+.admin_layout {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin_layout .go_back {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.admin_layout > .big_button {
+    font-size: 1.5rem;
+    width: 40vw;
+}

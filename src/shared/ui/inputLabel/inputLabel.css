@@ -1,0 +1,16 @@
+.input_label {
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input_label .input_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input_label .input_error_message {
+    color: var(--red-color);
+}

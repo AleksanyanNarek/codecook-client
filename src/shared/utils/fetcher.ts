@@ -11,7 +11,6 @@ export const fetcher = async <T>(
     // 'Authorization': `Bearer ${yourToken}`
   };
 
-
   try {
     const res = await fetch(`${baseUrl}${endpoint}`, {
       ...options,
@@ -19,6 +18,7 @@ export const fetcher = async <T>(
         ...defaultHeaders,
         ...(options.headers || {}),
       },
+      credentials: 'include',
     });
 
     if (!res.ok) {
@@ -26,6 +26,7 @@ export const fetcher = async <T>(
 
       throw errorData;
     }
+
     return res.json();
   } catch (error: unknown) {
     const errorResponse = error as ErrorResponse;

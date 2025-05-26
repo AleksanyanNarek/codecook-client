@@ -1,0 +1,22 @@
+.category_options {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.category_option {
+    letter-spacing: 0.1em;
+    border: 1px solid var(--main-text-color);
+    padding: 0.5rem;
+    transition: 0.3s;
+}
+
+.category_option:hover {
+    background-color: var(--main-text-color);
+    color: var(--main-background-color);
+}
+
+.category_option.selected {
+    background-color: var(--main-text-color);
+    color: var(--main-background-color);
+}

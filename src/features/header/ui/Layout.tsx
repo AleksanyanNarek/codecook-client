@@ -21,7 +21,7 @@ const Layout: FC<LayoutProps> = ({ action }) => {
           alt='main-logo'
           priority
         />
-        {/* <div className='menus'>
+        <div className='menus'>
           {
             menuList.map(({ text, url }) => (
               <LinkElement
@@ -31,7 +31,7 @@ const Layout: FC<LayoutProps> = ({ action }) => {
               />
             ))
           }
-        </div> */}
+        </div>
       </div>
       <div className='header_actions'>
         {action}
